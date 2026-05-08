@@ -1,0 +1,18 @@
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo
+
+
+yum install java-21-amazon-corretto -y
+yum install jenkins 
+systemctl enable jenkins
+systemctl start jenkins
+systemctl status jenkins
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+After this steps goto landing page using 8080
+
+yum install git -y
+jenkins default path : /var/lib/jenkins
+
+config webhook:  http://52.91.245.90:8080/github-webhook/
